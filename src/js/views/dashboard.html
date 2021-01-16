@@ -1,0 +1,50 @@
+<!--
+ Copyright (c) 2014, 2020, Oracle and/or its affiliates.
+ Licensed under The Universal Permissive License (UPL), Version 1.0
+ as shown at https://oss.oracle.com/licenses/upl/
+ -->
+<div class="oj-hybrid-padding">
+
+  <div id="tableDemo">
+    <div class="oj-flex">
+        <div class="oj-flex-item oj-web-padding">
+        <oj-validation-group valid="{{groupValid}}">
+            <oj-form-layout>
+                <oj-input-text id="employeeIdInput"  label-hint="Employee Id"
+                                value="{{inputemployeeId}}"></oj-input-text>
+               
+                <oj-input-text id="employeeFirstNameInput" label-hint="First Name" 
+                                value="{{inputemployeeFirstName}}"></oj-input-text>
+
+
+                <oj-input-text id="employeeLastNameInput" label-hint=" Last Name"
+                             value="{{inputemployeeLastName}}"></oj-input-text>
+            </oj-form-layout>
+            <oj-toolbar chroming='outlined'>
+            <oj-button id='addbutton' on-oj-action='[[addRow]]' disabled='[[disableCreate]]'>Create</oj-button>
+            <oj-button id='updateButton' on-oj-action='[[updateRow]]' disabled='[[disableRemoveUpdate]]'>Update</oj-button>
+            <oj-button id='removeButton' on-oj-action='[[removeRow]]' disabled='[[disableRemoveUpdate]]'>Remove</oj-button>
+        
+            </oj-toolbar>
+        </oj-validation-group>
+    </div>
+    <div id='tableContainer' class="oj-flex-item oj-web-padding">
+        <oj-table id="table" aria-label="Employee Table"
+                class="demo-table-container"
+                data='[[dataprovider]]'
+                columns='[{"headerText": "Employee Id", "field": "id"},
+                            {"headerText": "Last Name", "field": "lastName"},
+                            {"headerText": "first Name", "field": "firstName"}]'
+                selection-mode.row='single'
+                first-selected-row='{{firstSelected}}'
+                on-first-selected-row-changed="[[firstSelectedRowChangedListener]]"
+                >
+        </oj-table>
+
+    </div>
+    </div>
+
+</div>
+
+</div>
+
