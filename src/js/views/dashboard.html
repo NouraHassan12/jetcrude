@@ -21,9 +21,11 @@
                              value="{{inputemployeeLastName}}"></oj-input-text>
             </oj-form-layout>
             <oj-toolbar chroming='outlined'>
-            <oj-button id='addbutton' on-oj-action='[[addRow]]' disabled='[[disableCreate]]'>Create</oj-button>
-            <oj-button id='updateButton' on-oj-action='[[updateRow]]' disabled='[[disableRemoveUpdate]]'>Update</oj-button>
-            <oj-button id='removeButton' on-oj-action='[[removeRow]]' disabled='[[disableRemoveUpdate]]'>Remove</oj-button>
+            <oj-button id='addbutton' on-oj-action='[[addRow]]'>Create</oj-button>
+            <oj-button id='updateButton' on-oj-action='[[updateRow]]'
+             
+             >Update</oj-button>
+            <oj-button id='removeButton' on-oj-action='[[removeRow]]'>Remove</oj-button>
         
             </oj-toolbar>
         </oj-validation-group>
