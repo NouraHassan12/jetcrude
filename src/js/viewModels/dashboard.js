@@ -63,16 +63,6 @@ new CollectionDataProvider( this.myEmpCol , { keyAttributes: 'id' })
       this.firstSelected = ko.observable();
       this.disableSubmit = ko.observable(true);
   
-      // Return true if the Create button should be disabled
-      // this.disableCreate = ko.computed(function() {
-      //   return !this.inputemployeeId() || this.groupValid() === 'invalidShown';
-      // }.bind(this));
-  
-      // Return true if the Remove and Update buttons should be disabled
-      // this.disableRemoveUpdate = ko.computed(function() {
-      //   const firstSelected = this.firstSelected();
-      //   return !firstSelected || !firstSelected.key || this.groupValid() === 'invalidShown';
-      // }.bind(this));
   
       // Add a new row
       this.addRow = function () {
